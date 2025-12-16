@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista Productos</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body class="dashboard-body">
+        <div class="contenedor">
+            <div class="layout">
+            
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="sidebar-logo">
+                        <img src="../img/logo.jpg" alt="Cardy">
+                        <h3>FÁBRICA CARDY</h3>
+                    </div>
+                
+                    <nav class="nav-menu">
+                        <a href="../interfaz.html">Menú</a>
+                        <a href="../clientes/lista.html">Clientes</a>
+                        <a href="../proveedores/lista.html">Proveedores</a>
+                        <a href="../inventario/lista.html">Inventario</a>
+                        <a href="#">Producto</a>
+                        <a href="../pedidos/lista.html">Pedidos</a>
+                    </nav>
+                
+                    <div class="sidebar-footer">
+                        <a href="../soporte.html">Soporte</a>
+                        <a href="../index.html">Cerrar sesión</a>
+                    </div>
+                </aside>
+            
+                <main class="main-content">
+                    <header class="topbar">
+                        <div class="top-left">
+                            <span>15/12/2025</span>
+                            <span>12:12</span>
+                        </div>
+                    
+                        <div class="top-center">
+                            <input type="text" placeholder="Buscar">
+                        </div>
+                    
+                        <div class="top-right">
+                            @Nicolas @Administrador
+                        </div>
+                    </header>
+                
+                    <main class="contenido-tabla">
+                    
+                        <!-- CONTENIDO -->
+                        <h1>Lista Productos</h1>
+                        <div class="barra">
+                            <input type="text" placeholder="Buscar">
+                            <a href="#modal-agregar" class="btn">Agregar Productos</a>
+                        </div>
+                    
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre Producto</th>
+                                <th>Imagen</th>
+                                <th>Color</th>
+                                <th>Talla</th>
+                                <th>Precio</th>
+                                <th>Tipo</th>
+                                <th>Cantidad</th>
+                                <th>Opciones</th>
+                            </tr>
+                        
+                            <tr>
+                                <td>01</td>
+                                <td>Valentino</td>
+                                <td></td>
+                                <td>Rojo</td>
+                                <td>38</td>
+                                <td>$50.000</td>
+                                <td>Sandalia</td>
+                                <td>18</td>
+                                <td class="acciones">
+                                    <a href="#modal-editar" title="Editar">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <a href="#" title="Eliminar" onclick="event.preventDefault(); Swal.fire({
+                                        icon: 'success',
+                                        title: '¡Listo!',
+                                        text: 'Borrado correctamente',
+                                        confirmButtonColor: '#2ec4d6'
+                                    });">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>02</td>
+                                <td>Paco Rabanne</td>
+                                <td></td>
+                                <td>Azul</td>
+                                <td>36</td>
+                                <td>$55.000</td>
+                                <td>Zapato</td>
+                                <td>16</td>
+                                <td class="acciones">
+                                    <a href="#modal-editar" title="Editar">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <a href="#" title="Eliminar" onclick="event.preventDefault(); Swal.fire({
+                                        icon: 'success',
+                                        title: '¡Listo!',
+                                        text: 'Borrado correctamente',
+                                        confirmButtonColor: '#2ec4d6'
+                                    });">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                
+                                </td>
+                            </tr>
+                        </table>
+                    
+                        <button class="btn-reporte">
+                            <i class="fa fa-file-pdf-o"></i>    
+                        </button>
+                    </main>
+                </main>
+            </div>
+        
+            <!-- MODAL AGREGAR-->
+            <div id="modal-agregar" class="modal">
+                <div class="modal-contenido">
+                    <h2>Agregar Producto</h2>
+                
+                    <form class="formulario">
+                        <input type="text" placeholder="Nombre Producto">
+                        <input type="file">
+                        <input type="text" placeholder="Color">
+                        <input type="number" placeholder="Talla">
+                        <input type="number" placeholder="Precio">
+                        <input type="text" placeholder="Tipo">
+                        <input type="number" placeholder="Cantidad">
+                    
+                        <div class="modal-botones">
+                            <button type="submit" class="btn">Guardar</button>
+                            <a href="#" class="cancelar">Cancelar</a>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        
+            <!-- MODAL  EDITAR -->
+            <div id="modal-editar" class="modal">
+                <div class="modal-contenido">
+                    <h2>Editar Producto</h2>
+                
+                    <form class="formulario">
+                        <input type="text" placeholder="Nombre Producto">
+                        <input type="file">
+                        <input type="text" placeholder="Color">
+                        <input type="number" placeholder="Talla">
+                        <input type="number" placeholder="Precio">
+                        <input type="text" placeholder="Tipo">
+                        <input type="number" placeholder="Cantidad">
+                    
+                        <div class="modal-botones">
+                            <button type="submit" class="btn">Guardar</button>
+                            <a href="#" class="cancelar">Cancelar</a>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

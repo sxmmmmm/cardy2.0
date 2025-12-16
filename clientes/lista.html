@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Clientes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="dashboard-body">
+    <div class="contenedor">
+        <div class="layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="../img/logo.jpg" alt="Cardy">
+                    <h3>FÁBRICA CARDY</h3>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="../interfaz.html">Menú</a>
+                    <a href="../inventario/lista.html">Inventario</a>
+                    <a href="../proveedores/lista.html">Proveedores</a>
+                    <a href="#">Clientes</a>
+                    <a href="../productos/lista.html">Producto</a>
+                    <a href="../pedidos/lista.html">Pedidos</a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <a href="../soporte.html">Soporte</a>
+                    <a href="../index.html">Cerrar sesión</a>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <header class="topbar">
+                    <div class="top-left">
+                        <span>15/12/2025</span>
+                        <span>12:12</span>
+                    </div>
+
+                    <div class="top-center">
+                        <input type="text" placeholder="Buscar">
+                    </div>
+
+                    <div class="top-right">
+                        @Nicolas @Administrador
+                    </div>
+                </header>
+
+                <!-- CONTENIDO -->
+                <main class="contenido-tabla">
+
+                    <h1>Lista Clientes</h1>
+
+                    <div class="barra">
+                        <input type="text" placeholder="Buscar">
+                        <a href="#modal-agregar" class="btn">Agregar Clientes</a>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre Cliente</th>
+                            <th>identicacion</th>
+                            <th>Fecha nacimiento</th>
+                            <th>Correo</th>
+                            <th>Telefono</th>
+                            <th>Ciudad</th>
+                            <th>Direccion</th>
+                            <th>Opciones</th>
+                        </tr>
+
+                        <tr>
+                            <td>01</td>
+                            <td>Carlos Acosta</td>
+                            <td>1106227910</td>
+                            <td>29/09/2007</td>
+                            <td>carlosacosta@gmail.com</td>
+                            <td>3177875585</td>
+                            <td>Ibague</td>
+                            <td>Calle 123 #45-67</td>
+                            <td class="acciones">
+                                <a href="#modal-editar" title="Editar">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <a href="#" title="Eliminar" onclick="event.preventDefault(); Swal.fire({
+                                        icon: 'success',
+                                        title: '¡Listo!',
+                                        text: 'Borrado correctamente',
+                                        confirmButtonColor: '#2ec4d6'
+                                        });">
+                                        <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>Sergio Forero</td>
+                            <td>1104547363</td>
+                            <td>02/05/2008</td>
+                            <td>sergioforero@gmail.com</td>
+                            <td>3177875585</td>
+                            <td>Ibague</td>
+                            <td>Calle 456 #78-90</td>
+                            <td class="acciones">
+                                <a href="#modal-editar" title="Editar">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <a href="#" title="Eliminar" onclick="event.preventDefault(); Swal.fire({
+                                        icon: 'success',
+                                        title: '¡Listo!',
+                                        text: 'Borrado correctamente',
+                                        confirmButtonColor: '#2ec4d6'
+                                    });">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>03</td>
+                            <td>Nicolas Castro</td>
+                            <td>1105466557</td>
+                            <td>25/11/2007</td>
+                            <td>Nicolascastro@gmail.com</td>
+                            <td>3178935077</td>
+                            <td>Ibague</td>
+                            <td>Calle 324 #98-50</td>
+                            <td class="acciones">
+                                <a href="#modal-editar" title="Editar">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                &nbsp;&nbsp;
+                                <a href="#" title="Eliminar" onclick="event.preventDefault(); Swal.fire({
+                                        icon: 'success',
+                                        title: '¡Listo!',
+                                        text: 'Borrado correctamente',
+                                        confirmButtonColor: '#2ec4d6'
+                                    });">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <button class="btn-reporte">
+                        <i class="fa fa-file-pdf-o"></i>    
+                    </button>
+                </main>
+            </main>
+        </div>
+
+        <!-- MODAL AGREGAR-->
+        <div id="modal-agregar" class="modal">
+            <div class="modal-contenido">
+                <h2>Agregar Clientes</h2>
+                <form class="formulario">
+                    <input type="text" placeholder="Nombre Cliente">
+                    <input type="number" placeholder="Identificacion">
+                    <input type="date" placeholder="Fecha nacimiento">
+                    <input type="email" placeholder="Correo">
+                    <input type="number" placeholder="Telefono">
+                    <input type="text" placeholder="Ciudad">
+                    <input type="text" placeholder="Direccion">
+                    <div class="modal-botones">
+                        <button type="submit" class="btn">Guardar</button>
+                        <a href="#" class="cancelar">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- MODAL  EDITAR -->
+        <div id="modal-editar" class="modal">
+            <div class="modal-contenido">
+                <h2>Editar Clientes</h2>
+                <form class="formulario">
+                    <input type="text" placeholder="Nombre Cliente">
+                    <input type="number" placeholder="Identificacion">
+                    <input type="date" placeholder="Fecha nacimiento">
+                    <input type="email" placeholder="Correo">
+                    <input type="number" placeholder="Telefono">
+                    <input type="text" placeholder="Ciudad">
+                    <input type="text" placeholder="Direccion">
+
+                    <div class="modal-botones">
+                        <button type="submit" class="btn">Guardar</button>
+                        <a href="#" class="cancelar">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

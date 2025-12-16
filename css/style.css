@@ -1,0 +1,376 @@
+/*  RESET GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LOGIN */
+.login-body {
+    background-color: #fce1e9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background: #fff;
+    width: 25%;
+    height: 70%;
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.title-recuperar{
+    margin-bottom: 20px;
+}
+    .mensaje-info {
+    margin-top: 20px; /* Ajusta este valor según lo que necesites */
+    font-size: 12px;  /* Tamaño del texto, puedes ajustarlo también */
+    text-align: center; /* Centra el texto, puedes cambiarlo si prefieres otro alineamiento */
+    color: #000000; /* Color para que coincida con el estilo */
+}
+    
+
+.logo img {
+    width: 350px;
+    height: 250px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.login-card h2 {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 28px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #7e7d7d;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.btn-login {
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 40px;
+    background: #2ec4d6;
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.btn-volver{
+    position: fixed;      
+    top: 20px;            
+    left: 20px;           
+    text-decoration: none;
+    padding: 10px 14px;
+    background: #2ec4d6;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot {
+    display: block;
+    margin-top: 30px;
+    font-size: 17px;
+    color: #ff4f8b;
+    text-decoration: none;
+}
+
+/* DASHBOARD / INTERFAZ */
+.dashboard-body {
+    background: #f5f5f5;
+}
+
+/* ESTRUCTURA */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #fde1ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar-logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* MENU */
+.nav-menu a,
+.sidebar-footer a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-menu a:hover,
+.sidebar-footer a:hover {
+    background: #f8c8d8;
+}
+
+/* CONTENIDO */
+.main-content {
+    flex: 1;
+    background: #fff;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-center input {
+    width: 250px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* CONTENIDO */
+.content {
+    padding: 40px;
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    max-width: 700px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.contenido-tabla {
+    width: 90%;
+    margin: 0 auto;
+}
+
+ 
+/* inventario */
+/* Botón agregar */
+.btn {
+    background: #2bbcd3;
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Botón reporte */
+.btn-reporte {
+    margin-top: 20px;
+    padding: 8px 14px;
+    background: #2bbcd3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Título */
+.contenido h1 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.contenido-tabla h1{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra input {
+    padding: 6px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 auto; 
+}
+
+.soporte {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.soporte h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.medio {
+    margin-bottom: 25px;
+}
+
+.medio h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.medio ol {
+    margin-left: 20px;
+}
+
+.medio p {
+    font-size: 15px;
+}
+
+.agregar-cardy {
+    width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.lista {
+    background: #4fd1e5;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.fila {
+    display: flex;
+    gap: 10px;
+}
+
+.agregar {
+    margin-top: 15px;
+    padding: 8px 30px;
+    background: #4fd1e5;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Fondo oscuro */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+/* Mostrar modal */
+.modal:target {
+    display: block;
+}
+
+/* Caja */
+.modal-contenido {
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 80px auto;
+}
+
+/* Botones */
+.modal-botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.cancelar {
+    background: #999;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
